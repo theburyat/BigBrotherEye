@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "bigbrothereye"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -29,7 +29,10 @@ dependencies {
 }
 
 tasks {
-
+    patchPluginXml {
+        sinceBuild.set("231")
+        untilBuild.set("999.*")
+    }
 }
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
